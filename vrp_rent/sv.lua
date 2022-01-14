@@ -67,12 +67,6 @@ AddEventHandler("vRP:playerSpawn",function(uid,suid,fs)
 	end
 end)
 
-RegisterCommand("da",function(s)
-	local u = vRP.getUserId({s})
-	TriggerEvent("vRP:playerSpawn",u,s,true)
-end)
-
-
 AddEventHandler("playerDropped",function()
 	local source = source
 	local uid = vRP.getUserId({source})
