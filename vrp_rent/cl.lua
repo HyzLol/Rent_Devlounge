@@ -106,14 +106,8 @@ RegisterNetEvent("ToggleThread",function(tr,c,l)
 end)
 
 RegisterNUICallback("exit",function(data)
-    print(json.encode(data))
-    print(type(data.close),data.close)
     if data.close == false then 
         TriggerServerEvent("RentVeh",data.veh)
     end
     ToggleUI()
-end)
-
-RegisterCommand("daa",function()
-    print(GetEntityHeading(PlayerPedId()))
 end)
