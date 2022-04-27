@@ -10,7 +10,6 @@ $(function(){
             arr = item.veh
         }
         if (item.show) {
-            console.log(JSON.stringify(arr))
             rent = true;
             SetSlot(i)  
             $("#rent").fadeIn()
@@ -21,7 +20,6 @@ $(function(){
         }
     })
     SetSlot = function(i) {
-        console.log(JSON.stringify(arr))
         $("#photo").attr("src",arr[i].img)
         $("#veh-name").text(arr[i].veh.toUpperCase())
         $("#price").text("Price | "+arr[i].price+"$")
